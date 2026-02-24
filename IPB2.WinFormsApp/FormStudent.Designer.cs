@@ -66,6 +66,7 @@
             txtAge.Name = "txtAge";
             txtAge.Size = new Size(230, 31);
             txtAge.TabIndex = 3;
+            txtAge.KeyPress += txtAge_KeyPress;
             // 
             // lblAge
             // 
@@ -75,6 +76,7 @@
             lblAge.Size = new Size(44, 25);
             lblAge.TabIndex = 2;
             lblAge.Text = "Age";
+            
             // 
             // txtClassNo
             // 
@@ -98,6 +100,7 @@
             txtMobileNo.Name = "txtMobileNo";
             txtMobileNo.Size = new Size(230, 31);
             txtMobileNo.TabIndex = 7;
+            txtMobileNo.KeyPress += txtMobileNo_KeyPress;
             // 
             // lblMobileNo
             // 
@@ -139,7 +142,6 @@
             lblFees.Size = new Size(47, 25);
             lblFees.TabIndex = 10;
             lblFees.Text = "Fees";
-            lblFees.Click += label6_Click;
             // 
             // btnSave
             // 
@@ -149,6 +151,7 @@
             btnSave.TabIndex = 12;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
             // btnCancel
             // 
@@ -158,6 +161,7 @@
             btnCancel.TabIndex = 13;
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Click += btnCancel_Click;
             // 
             // frmStudent
             // 
