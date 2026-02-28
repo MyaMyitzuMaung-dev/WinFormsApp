@@ -42,6 +42,11 @@
             lblFees = new Label();
             btnSave = new Button();
             btnCancel = new Button();
+            dgvStudents = new DataGridView();
+            btnLoad = new Button();
+            btnUpdate = new Button();
+            btnDelete = new Button();
+            ((System.ComponentModel.ISupportInitialize)dgvStudents).BeginInit();
             SuspendLayout();
             // 
             // lblStudent
@@ -76,7 +81,6 @@
             lblAge.Size = new Size(44, 25);
             lblAge.TabIndex = 2;
             lblAge.Text = "Age";
-            
             // 
             // txtClassNo
             // 
@@ -145,7 +149,7 @@
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(172, 362);
+            btnSave.Location = new Point(54, 362);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(112, 34);
             btnSave.TabIndex = 12;
@@ -155,7 +159,7 @@
             // 
             // btnCancel
             // 
-            btnCancel.Location = new Point(358, 362);
+            btnCancel.Location = new Point(476, 362);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(112, 34);
             btnCancel.TabIndex = 13;
@@ -163,11 +167,55 @@
             btnCancel.UseVisualStyleBackColor = true;
             btnCancel.Click += btnCancel_Click;
             // 
+            // dgvStudents
+            // 
+            dgvStudents.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvStudents.Location = new Point(615, 34);
+            dgvStudents.Name = "dgvStudents";
+            dgvStudents.RowHeadersWidth = 62;
+            dgvStudents.Size = new Size(669, 292);
+            dgvStudents.TabIndex = 14;
+            dgvStudents.CellClick += dgvStudents_CellClick;
+            // 
+            // btnLoad
+            // 
+            btnLoad.Location = new Point(910, 362);
+            btnLoad.Name = "btnLoad";
+            btnLoad.Size = new Size(112, 34);
+            btnLoad.TabIndex = 15;
+            btnLoad.Text = "Load";
+            btnLoad.UseVisualStyleBackColor = true;
+            btnLoad.Click += btnLoad_Click;
+            // 
+            // btnUpdate
+            // 
+            btnUpdate.Location = new Point(197, 362);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(112, 34);
+            btnUpdate.TabIndex = 16;
+            btnUpdate.Text = "Update";
+            btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
+            // 
+            // btnDelete
+            // 
+            btnDelete.Location = new Point(337, 362);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(112, 34);
+            btnDelete.TabIndex = 17;
+            btnDelete.Text = "Delete";
+            btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
+            // 
             // frmStudent
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1296, 450);
+            Controls.Add(btnDelete);
+            Controls.Add(btnUpdate);
+            Controls.Add(btnLoad);
+            Controls.Add(dgvStudents);
             Controls.Add(btnCancel);
             Controls.Add(btnSave);
             Controls.Add(txtFees);
@@ -185,6 +233,7 @@
             Name = "frmStudent";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Student";
+            ((System.ComponentModel.ISupportInitialize)dgvStudents).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -205,5 +254,9 @@
         private Label lblFees;
         private Button btnSave;
         private Button btnCancel;
+        private DataGridView dgvStudents;
+        private Button btnLoad;
+        private Button btnUpdate;
+        private Button btnDelete;
     }
 }
